@@ -14,4 +14,4 @@ for num in range(lower, upper + 1):
                break
        else:
            print(num)
-#El archivo se recupero
+#El archivo se recupero exitosamente
