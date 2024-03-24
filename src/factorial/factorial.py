@@ -24,12 +24,20 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 numeros = sys.argv[1].split('-')
-desde = int(numeros[0])
-hasta = int(numeros[1])
+n1 = int(numeros[0])
+n2 = int(numeros[1])
 
-if desde >= hasta:
-    print("El primer número debe ser menor que el segundo número en el rango.")
+if n1 < 1:
+    print("El límite inferior debe ser mayor o igual a 1.")
+    sys.exit()
+
+elif n2 > 60:
+    print("El límite superior no puede ser mayor que 60.")
+    sys.exit() 
+
+if n1 >= n2:
+    print("El primer digito debe ser menor que el segundo")
     sys.exit(1)
 
-for num in range(desde, hasta + 1):
+for num in range(n1, n2 + 1):
     print("Factorial de", num, "! es", factorial(num))
